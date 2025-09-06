@@ -1,6 +1,6 @@
 # Barber Shop Website
 
-**URL**: 
+**URL**: [https://marick.vercel.app/](https://marick.vercel.app/)
 
 A modern, responsive website for a barbershop built with React, TypeScript, and Tailwind CSS. This project provides a professional online presence for barber services with features for booking appointments, showcasing the team, displaying services, and sharing customer testimonials.
 
