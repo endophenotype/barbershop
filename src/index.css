@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Marick Barbershop Design System - Premium Dark Theme */
+
+@layer base {
+  :root {
+    /* Premium Dark Theme */
+    --background: 0 0% 6%;                    /* #0F0F0F */
+    --foreground: 0 0% 100%;                  /* #FFFFFF */
+
+    --card: 0 0% 8%;                          /* Slightly lighter than bg */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Golden Accent - Premium Brand Color */
+    --primary: 43 71% 52%;                    /* #D4AF37 */
+    --primary-foreground: 0 0% 6%;
+    --primary-glow: 43 71% 65%;               /* Lighter gold for glows */
+
+    /* Brown Leather Accent */
+    --secondary: 25 59% 31%;                  /* #8B4513 */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;                        /* Dark grey sections */
+    --muted-foreground: 0 0% 66%;             /* #A8A8A8 */
+
+    --accent: 43 71% 52%;                     /* Same as primary */
+    --accent-foreground: 0 0% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;                       /* Dark borders */
+    --input: 0 0% 12%;                        /* Input backgrounds */
+    --ring: 43 71% 52%;                       /* Golden focus rings */
+
+    --radius: 0.75rem;
+
+    /* Custom Barbershop Tokens */
+    --gold-gradient: linear-gradient(135deg, hsl(43 71% 52%), hsl(43 71% 65%));
+    --premium-shadow: 0 25px 50px -12px hsl(0 0% 0% / 0.8);
+    --gold-shadow: 0 10px 30px -10px hsl(43 71% 52% / 0.3);
+    --hero-overlay: linear-gradient(135deg, hsl(0 0% 6% / 0.8), hsl(0 0% 6% / 0.4));
+    
+    /* Animation Tokens */
+    --transition-premium: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+    font-variation-settings: 'opsz' 32;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Typography Classes */
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Premium Effects */
+  .text-gradient {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-gold {
+    box-shadow: var(--gold-shadow);
+  }
+
+  .shadow-premium {
+    box-shadow: var(--premium-shadow);
+  }
+
+  /* Smooth Animations */
+  .transition-premium {
+    transition: var(--transition-premium);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
